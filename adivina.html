@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+</head>
+<body>
+        <h1>Adivina el número</h1>
+        <p>Introduce un número entre 1 y 100:</p>
+        <input type="text" id="inputNumber">
+        <button id="submitButton">Adivinar</button>
+        <p id="result"></p>
+    
+        <script>
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            let inputField = document.getElementById("inputNumber");
+            let submitButton = document.getElementById("submitButton");
+            let resultField = document.getElementById("result");
+    
+            submitButton.addEventListener("click", function() {
+                let userGuess = parseInt(inputField.value);
+                if (userGuess === randomNumber) {
+                    resultField.innerHTML = "¡Felicidades, adivinaste el número!";
+                    submitButton.disabled = true;
+                    inputField.disabled = true;
+                } else if (userGuess > randomNumber) {
+                    resultField.innerHTML = "El número que estás buscando es menor";
+                } else {
+                    resultField.innerHTML = "El número que estás buscando es mayor";
+                }
+            });
+        </script>
+</body>
+</html>

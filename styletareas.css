@@ -1,0 +1,48 @@
+#tasks {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  width: 500px;
+  height: 25px;
+  background-color: lightgray;
+  padding: 5px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+li button {
+  width: 80px;
+  height: 25px;
+  float: right;
+  background-color: rgb(255, 3, 3);
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+
+}

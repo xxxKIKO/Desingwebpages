@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reconocimiento de voz 2</title>
+    <style>
+      #voice-text {
+        width: 300px;
+        height: 50px;
+        border: 1px solid rgb(14, 14, 14);
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+      }
+      #record-btn {
+        width: 100px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      button{
+        width: 100px;
+        height: 40px;
+        background-color: rgb(147, 147, 155);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      #buttons {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+        border: 5px;
+      }
+    </style>
+    <script src="scriptareas2.js"></script>
+  </head>
+  <body>
+    <div align="center">
+    <h1>Dicta un mensaje</h1>
+    <div id="voice-text"></div>
+    <div id="buttons">
+    <button id="record-btn">Recibir Mensaje</button>
+    <button id="addTask">Agregar</button>
+    </div>
+    <h2>Lista de Tareas</h2>
+      <div id="tasks">
+          <ul id="taskList"></ul>
+      </div>
+    </div>
+    
+    
+    <script>
+      const recordBtn = document.querySelector("#record-btn");
+      const voiceText = document.querySelector("#voice-text");
+      
+      // Escuchar evento click en el botón
+      recordBtn.addEventListener("click", function() {
+        // Verificar si el navegador soporta reconocimiento de voz
+        if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+          var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+          recognition.lang = "es-ES";
+          recognition.start();
+          
+          recognition.onresult = function(event) {
+            // Asignar el mensaje dictado a la caja de texto
+            voiceText.innerHTML = event.results[0][0].transcript;
+          }
+        } else {
+          voiceText.innerHTML = "Lo siento, tu navegador no soporta reconocimiento de voz";
+        }
+      });
+    </script>
+  </body>
+</html>

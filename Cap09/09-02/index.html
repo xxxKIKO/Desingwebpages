@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursos de Diseño Web</title>
+  </head>
+  <body>
+    <div class="contenedor">
+        <header role="banner">
+              <div class="logo">
+                    <img src="img/logo.png">
+              </div>
+              <nav class="menu" role="navigation">
+                  <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#cursos">Cursos</a>
+                        <ul>
+                          <li><a href="#">PHP</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Testimoniales</a></li>
+                    <li><a href="http://google.com" target="_blank">Ir a Google</a></li>
+                    <li><a href="#noticias" >Ir a Noticias</a></li>
+                  </ul>
+              </nav>
+        </header>
+
+        <main class="contenido" role="main">
+            <section id="cursos">
+                <h2>Nuestros Cursos</h2>
+                <div>
+                    <h3>HTML5</h3>
+                    <img src="img/html5.png" alt="curso html5" width="200">
+                    <a href="programa-html5.pdf" download>Descargar Programa</a>
+
+                    <p>Ventajas de este curso:</p>
+                    <ul>
+                      <li>Lo puedes tomar en linea
+                          <ul>
+                            <li>En Udemy</li>
+                          </ul>
+                      </li>
+                      <li>Avanza a tu ritmo</li>
+                      <li>Puedes preguntar al profesor tus dudas</li>
+                    </ul>
+                    <p>Temario del Curso:</p>
+                    <ol>
+                      <li>Aprender lo básico de HTML</li>
+                      <li>Etiquetas HTML5</li>
+                      <li>Crear Enlaces</li>
+                      <li>Crear Listas</li>
+                    </ol>
+                    <p>Lo que debes aprender para ser desarrollador web:</p>
+                     <dl>
+                       <dt>HTML5</dt>
+                       <dd>Agrega estructura a tus desarrollos</dd>
+                       <dt>CSS3</dt>
+                       <dd>Agrega presentación a tus desarrollos</dd>
+                       <dt>JavaScript</dt>
+                       <dd>Agrega inteligencia a tus desarrollos</dd>
+                     </dl>
+                </div>
+                <div>
+                    <h3>CSS3</h3>
+                    <img src="img/css3.png" alt="curso css3" width="200">
+                </div>
+                <div>
+                    <h3>JavasScript</h3>
+                    <img src="img/js.jpg" alt="curso javascript" width="200">
+                </div>
+            </section> <!--section.cursos-->
+
+            <section id="noticias">
+              <h2>Ultimas Noticias</h2>
+                  <article role="article">
+                        <h3>Aprender a Programar en el Siglo 21 es muy importante.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </article>
+                  <article role="article">
+                        <h3>Aprender a Programar en el Siglo 21 es muy importante.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </article>
+            </section> <!--section.noticias-->
+        </main>
+
+        <aside role="complementary">
+            <h2>Próximos Cursos</h2>
+            <table width="300">
+                 <caption>Próximos Cursos</caption>
+                 <thead>
+                      <tr>
+                         <th>Curso</th>
+                         <th>Precio</th>
+                      </tr>
+                 </thead>
+                 <tfoot>
+                      <tr>
+                          <td colspan="2" align="center">No te los pierdas</td>
+                      </tr>
+                 </tfoot>
+                 <tfoot>
+                      <tr>
+                          <td>No te los pierdas</td>
+                      </tr>
+                 </tfoot>
+                 <tbody>
+                    <tr>
+                        <td rowspan="2">PHP </td>
+                        <td>$99</td>
+                    </tr>
+                    <tr>
+                      <td>$99 (sabatino)</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>$99</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>$99</td>
+                    </tr>
+                 </tbody>
+            </table>
+        </aside>
+    </div> <!--.contenedor-->
+
+    <div class="contacto">
+          <h2>Formulario de Contacto</h2>
+          <form class="form">
+              <label for="nombre"> Nombre:
+                  <input type="text" name="nombre" id="nombre" placeholder="Tu nombre aquí" autocomplete="off">
+              </label>
+              <br>
+              <br>
+              <label for="apellido"> Apellido:
+                  <input type="text" name="apellido" id="apellido" placeholder="Tu apellido aquí">
+              </label>
+              <input type="submit" >
+          </form>
+    </div>
+
+    <footer role="contentinfo" >
+        <div class="nosotros">
+            <h3>Sobre nuestra escuela</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="menu">
+              <nav>
+                menu aqui
+              </nav>
+        </div>
+        <p>Cursos diseño web &mdash; Todos los derechos reservados &copy; </p>
+    </footer>
+
+  </body>
+</html>

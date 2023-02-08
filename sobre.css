@@ -1,0 +1,24 @@
+body {
+  font-family: 'FOT-NewRodin Pro L';
+  font-size: medium;
+  background: linear-gradient(to bottom right, #531076, black);
+}
+
+div {
+  background-color: black;
+  border: 3px solid gray;
+  margin: 25px;
+  padding: 8px;
+}
+
+#acerca, p {
+  color: rgb(106, 164, 239);
+  font-size: 25px;
+  margin: 3px;
+  padding: 0px;
+  border-radius:22px;
+}
+
+p {
+  color: orange;
+}

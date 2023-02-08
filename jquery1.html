@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#addButton").click(function() {
+          var task = $("#taskInput").val();
+          $("#taskList").append("<li>" + task + "</li>");
+        });
+
+        $("#taskList").on("click", "li", function() {
+          $(this).remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="taskInput">
+    <button id="addButton">Agregar Tarea</button>
+    <ul id="taskList"></ul>
+  </body>
+</html>

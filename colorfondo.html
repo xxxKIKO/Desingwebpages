@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      h1 {
+        margin-top: 20px;
+      }
+    </style>
+          <script>
+          function changeBackgroundColor() {
+            var color = document.getElementById("colorSelection").value;
+            document.body.style.backgroundColor = color;
+          }
+        </script>
+
+      <body>
+        <!--para seleccionar el color de fondo-->>
+        <h1>Selecciona un color de fondo:</h1>
+        <select id="colorSelection" onchange="changeBackgroundColor()">
+          <option value="#ffffff">Blanco</option>
+          <option value="#ff0000">Rojo</option>
+          <option value="#00ff00">Verde</option>
+          <option value="#0000ff">Azul</option>
+        </select>
+        <!--para que te de la bienvenida-->>
+        <div class="container">
+            <h1>Por favor, ingresa tu nombre</h1>
+            <input type="text" id="nameInput">
+            <button id="submitBtn">Submit</button>
+            <h1 id="welcomeMessage"></h1>
+          </div>
+
+          <script>
+            const nameInput = document.getElementById("nameInput");
+            const submitBtn = document.getElementById("submitBtn");
+            const welcomeMessage = document.getElementById("welcomeMessage");
+      
+            submitBtn.addEventListener("click", function() {
+              const name = nameInput.value;
+              welcomeMessage.innerHTML = `Bienvenido, ${name}!`;
+            });
+          </script>
+
+<div align="center"> <h1>Este es un reloj</h1></div>
+<br><br>
+<div align="center"><h1 id="clock">00:00:00</h1>
+</div>
+<script>
+  function updateClock() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var clock = document.getElementById("clock");
+    
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    
+    clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+  }
+  
+  setInterval(updateClock, 1000);
+</script>
+      </body>
+</html>

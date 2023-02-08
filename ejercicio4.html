@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Selecciona una opción:</label> <br>
+        <input type="radio" name="options" value="option1"> Option 1 <br>
+        <input type="radio" name="options" value="option2" onclick="showOption('option2')"> Option 2 <br>
+        <input type="radio" name="options" value="option3" onclick="showOption('option3')"> Option 3 <br>
+      
+        <div id="option1" style="display:none" class="option">
+          <label for="option1-input">Option 1 Input:</label><br>
+          <input type="text" id="option1-input" placeholder="Enter option 1 input"><br>
+        </div>
+      
+        <div id="option2" style="display:none" class="option">
+          <label for="option2-input">Option 2 Input:</label><br>
+          <input type="text" id="option2-input" placeholder="Enter option 2 input"><br>
+        </div>
+      
+        <div id="option3" style="display:none" class="option">
+          <label for="option3-input">Option 3 Input:</label><br>
+          <input type="text" id="option3-input" placeholder="Enter option 3 input"><br>
+        </div>
+      
+        <input type="submit" value="Submit">
+      </form>
+      
+      <script>
+        function showOption(option) {
+          var options = document.getElementsByClassName("option");
+          for (var i = 0; i < options.length; i++) {
+            options[i].style.display = "none";
+          }
+          document.getElementById(option).style.display = "block";
+      }
+    </script>
+</body>
+</html>
+
+
+  
+  

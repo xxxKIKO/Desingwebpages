@@ -1,0 +1,242 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos del header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  header nav {
+    margin-right: 20px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos de la sección hero */
+  .hero {
+    background-image: url(images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos de la sección hero */
+.hero .container {
+    text-align: center;
+  }
+  
+  .hero h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #fff;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  /* Estilos de las secciones */
+  section {
+    padding: 80px 0;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+  /* Estilos de la sección de servicios */
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .services-container .service {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .services-container .service img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .services-container .service h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .services-container .service p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* Estilos de la sección de portafolio */
+  .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .portfolio-container .portfolio-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-container .portfolio-item img {
+    width: 100%;
+  }
+  
+  .portfolio-container .portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-container .portfolio-item p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .portfolio-container .portfolio-item .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  /* Estilos de la sección de contacto */
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #contact form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  #contact form input[type="text"],
+  #contact form input[type="email"],
+  #contact form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  #contact form input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #contact form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos del footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  footer .container {
+    /*max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*Estilos para la sección multimedia*/
+  .multimedia-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .multimedia-container .mediaobject {
+    width: 30%;
+    text-align: center;
+  }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+	.pre {
+	border: 1px solid #5878ca;
+}
+	.caja { 
+
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: #889ccf; 
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid #5878ca;}
+
+.caja1 { 
+font-family: sans-serif; 
+font-size: 18px; 
+font-weight: 400; 
+color: #ffffff; 
+background:#ee0467 }
+
+.caja2 {
+font-family: sans-serif;
+font-size: 18px;
+font-weight: 400;
+color: #ffffff;
+background:#ee0467;
+margin: 0 0 25px;
+overflow: hidden;
+padding: 20px;
+}
+
+.caja3 {
+font-family: sans-serif;
+font-size: 18px;
+font-weight: 400;
+color: #ffffff;
+background:#ee0467;
+margin: 0 0 25px;
+overflow: hidden;
+padding: 20px;
+border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+border: 2px solid #5878ca;}
+
+.caja4 {
+text-align: center;
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+font-size: 18px;
+font-weight: 400;
+color: #ffffff;
+background:#ee0467;
+margin: 0 0 25px;
+overflow: hidden;
+padding: 20px;
+border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+border: 2px solid #5878ca;}
+</style>
+
+
+<div>
+
+	<h1>Cajas (o contenedores) bordeadas con color y texto.</h1>
+<h2>Un sencillo tutorial con CSS</h2>
+<p>Voy a explicar como hacer con CSS una caja para texto asimétrica y bordeada como esta:</p>
+<p class="caja">¡Hola! Soy una caja muy prrona... :D</p>
+
+<p>Para empezar, en mi hoja de estilo CSS <em>style.css</em> , voy a crear un nuevo estilo al que llamaré “caja” y le daré las propiedades básicas:</p>
+<pre class="pre">.caja { 
+font-family: sans-serif; 
+font-size: 18px; 
+font-weight: 400; 
+color: #ffffff; 
+background:#ee0467 }</pre>
+<p>He indicado tipo, tamaño, grosor y color de fuente, así como el color de fondo de la caja (background).</p>
+<p>Ahora, en mi editor de html, voy a probar el estilo que acabo de crear. Para ello utilizo la etiqueta <em>class</em> convencional:</p>
+<pre class="pre">&lt;div class="caja"&gt;¡Hola! Soy una caja muy prrona...:D&lt;/div&gt;</pre>
+<p style="text-align: justify;">O la etiqueta <em>class</em> para párrafos:</p>
+<pre class="pre">&lt;p class="caja"&gt;¡Hola! Soy una caja muy prrona...:D&lt;/p&gt;</pre>
+<p>Y el resultado será este:</p>
+<p class="caja1">¡Hola! Soy una caja muy prrona...:D </p>
+
+<p>Para que el texto no se quede “pegado” a la caja, vamos a darle "aire" mediante el padding. Podemos darle un padding general o desglosar el padding para controlar mejor las proporciones. En este caso le voy a dar un padding de 20px por todos los lados:</p>
+<pre class="pre">padding: 20px;</pre>
+<p>Pero si quisiera desglosarlo sería así:</p>
+<pre class="pre">padding-top: 20px;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;</pre>
+<p>O así:</p>
+<pre class="pre">padding: 20px 20px 20px 20px;</pre>
+<p>después le damos un margen a nuestra caja mediante la propiedad <em>margin:</em></p>
+<pre class="pre">margin: 0 0 25px;</pre>
+<p>Por último definimos el comportamiento de los elementos de la caja</a> cuando no caben en su elemento contenedor, con la propiedad <em>overflow</em>:</p>
+<pre class="pre">overflow: hidden;</pre>
+<p>En este caso, todo lo que quede fuera de la caja quedará oculto, pero podremos solucionarlo utilizando la etiqueta <em>div </em>para<em> párrafos</em>. De esa forma nada se saldra de nuestra caja pues la caja será todo el párrafo.</p>
+<p>Nuestro código hasta el momento será este:</p>
+<pre class="pre">.caja {
+font-family: sans-serif;
+font-size: 18px;
+font-weight: 400;
+color: #ffffff;
+background: #889ccf;
+margin: 0 0 25px;
+overflow: hidden;
+padding: 20px;
+}</pre>
+<p>Nuestra caja resultante hasta el momento queda así:</p>
+<p class="caja2">¡Hola! Soy una caja muy prrona...:D</p>
+<p>He decidido darle un radio de 35px en las esquinas superior izquierda y superior derecha para crear cajas asimétricas. también le he añadido un borde de 2px en un tono más oscuro:</p>
+<pre class="pre">border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+border: 2px solid #5878ca;
+
+</pre>
+<p>Mi caja casi está lista:</p>
+<p class="caja3">¡Hola! Soy una caja muy prrona...y terminada :D</p>
+<p>Observado el resultado voy a cambiar algunas propiedades y a añadir alguna más para ajustar el diseño.</p>
+<p>Haré que por defecto los textos de mi caja queden centrados con la propiedad <em>text-align </em>y cambiaré la <em>font-family</em> a una tipografía geométrica sin serif, la<em> Century Gothic</em> :</p>
+<pre class="pre">text-align: center;
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+</pre>
+<p>Con estos últimos cambios ya tengo la caja que estaba buscando, entonces llamo a mi caja mediante la etiqueta <em>div class</em>:</p>
+<pre class="pre">&lt;div class="caja"&gt;Hola! Soy una caja muy estilosa&lt;/div&gt;
+</pre>
+<p>Ya puedo ver el resultado final:</p>
+<p class="caja3">¡Hola! Soy una caja muy estilosa</p>
+<pre class="pre">/*----------- CAJA ----------- */
+.caja { 
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: #889ccf; 
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid #5878ca;}</pre>
+
+	
+</div>
+
+
+
+
+	</body>
+</html>

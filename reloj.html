@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Este es un reloj</title>
+    <style>
+        #clock {
+  font-size: 36px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div align="center"> <h1>Este es un reloj</h1></div>
+    <br><br>
+    <div align="center"><h1 id="clock">00:00:00</h1>
+    </div>
+    <script>
+      function updateClock() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var clock = document.getElementById("clock");
+        
+        if (hours < 10) {
+          hours = "0" + hours;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+        
+        clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+      }
+      
+      setInterval(updateClock, 1000);
+    </script>
+</body>
+
+</html>

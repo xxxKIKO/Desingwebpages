@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reconocimiento de Voz</title>
+    <style>
+    button {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+  }
+
+      #speech-container {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #speech-input {
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+        width: 70%;
+        margin: 20px auto;
+      }
+
+      #record-btn {
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styletareas.css">
+  </head>
+  <body>
+    <div id="speech-container">
+      <h1>Dicta un mensaje</h1>
+      <input type="text" id="speech-input"><br>
+      <button id="record-btn">Recibir Mensaje</button>
+      <button id="addTask">Agregar</button>
+      <h3 align="center">Lista de Tareas</h3>
+        <div id="tasks">
+            <ul id="taskList"></ul>
+        </div>
+    <script src="scriptareas.js"></script>
+    </div>
+
+   
+
+    <script>
+      // Comprueba si el navegador soporta la API de reconocimiento de voz
+      if (!('webkitSpeechRecognition' in window)) {
+        console.log("El navegador no soporta la API de reconocimiento de voz");
+      } else {
+        // Crea una instancia de la API de reconocimiento de voz
+        const recognition = new webkitSpeechRecognition();
+        recognition.interimResults = true;
+        recognition.lang = "es-ES";
+
+        // Referencia al elemento de texto donde se mostrará el mensaje dictado
+        const speechInput = document.querySelector("#speech-input");
+
+        // Inicia el reconocimiento de voz
+        recognition.start();
+
+        // Escucha los resultados parciales y finales del reconocimiento de voz
+        recognition.addEventListener("result", e => {
+          const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join("");
+
+          speechInput.value = transcript;
+
+          // Finaliza el reconocimiento de voz cuando el usuario deja de hablar
+          if (e.results[0].isFinal) {
+            recognition.stop();
+          }
+        });
+
+        // Muestra un error si ocurre algún problema con el reconocimiento de voz
+        recognition.addEventListener("error", e => {
+          console.log("Error en el reconocimiento de voz: " + e.error);
+        });
+      }
+    </script>
+  </body>
+</html>

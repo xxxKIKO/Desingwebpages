@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipoteca</title>
+</head>
+<body>
+    <h1>Cálculo de Pago Mensual de Hipoteca</h1>
+    <form>
+      <label for="amount">Cantidad Prestada:</label>
+      <input type="text" id="amount" name="amount">
+      <br><br>
+      <label for="interest">Tasa de Interés:</label>
+      <input type="text" id="interest" name="interest">
+      <br><br>
+      <label for="years">Número de Años del Préstamo:</label>
+      <input type="text" id="years" name="years">
+      <br><br>
+      <button id="calculateBtn">Calcular Pago Mensual</button>
+    </form>
+    <br><br>
+    <div id="result">
+      <p>Pago Mensual: $<span id="payment"></span></p>
+    </div>
+    <script>
+      const calculateBtn = document.getElementById("calculateBtn");
+      const amountInput = document.getElementById("amount");
+      const interestInput = document.getElementById("interest");
+      const yearsInput = document.getElementById("years");
+      const paymentSpan = document.getElementById("payment");
+      
+      calculateBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        const amount = parseFloat(amountInput.value);
+        const interest = parseFloat(interestInput.value) / 100 / 12;
+        const years = parseFloat(yearsInput.value) * 12;
+        const x = Math.pow(1 + interest, years);
+        const monthly = (amount * x * interest) / (x - 1);
+        paymentSpan.innerHTML = monthly.toFixed(2);
+      });
+    </script>
+</body>
+</html>
